@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block content %}
+<style> .carousel-inner > .carousel-item > img{
+     width: 400px; 
+     height: 400px; } 
+</style>
+<main>
+    <p class="center-block" style="width: 100px; padding:60px;"></p>
+    <div class="container-fluid text-center">
+        <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{{ url_for('static', filename='guide_img.jpg') }}" alt="">
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <h1 class="display-4 mt-5">다음의 경우는 100%사기꾼!!!</h1>
+                        <pre>
+
+
+
+
+더치트 검색결과 사기 <b>신고내역이 조회</b>되는 경우
+
+판매자가 보내준 안전거래 사이트가 <b>네이버 검색</b>으로 나오지 않는 경우
+
+네이버페이 안전결재시 예금주가 <b>'네이버페이'</b>가 아닌 경우
+
+인증 사진이 다른 곳에서 <b>퍼온사진</b>일 경우
+
+수수로 명목으로 입금 후 <b>재차 입금</b>을 요구하는 경우
+                        </pre>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <h1 class="display-4 mt-5">거래 전 확인해야할 기본적인 사항들!!!</h1>
+                        <pre>
+
+
+
+
+제품 사진이 <b>도용된 사진</b>인지 확인해본다
+
+거래 전, <b>중고시세</b>를 찾아본다
+
+판매자 정보로 <b>사기꾼 조회</b>를 해본다
+
+<b>전화번호가 없는 사람</b>은 의심한다
+
+무리한 <b>택배 요구</b>를 하는지 확인한다
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</main>
+{% endblock %}
